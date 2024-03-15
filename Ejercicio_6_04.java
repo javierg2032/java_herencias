@@ -13,9 +13,9 @@ public class Ejercicio_6_04 {
 
 		Piano piano1 = new Piano(notas1);
 		piano1.interpretar();
-		piano1.add("RE");
+		piano1.addEnum(NotasMusicales.RE);
 		piano1.interpretar();
-		piano1.add("SOL");
+		piano1.addEnum(NotasMusicales.SOL);
 		piano1.interpretar();
 		piano1.addEnum(NotasMusicales.FA);
 		piano1.interpretar();
