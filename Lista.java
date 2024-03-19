@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Lista { // EJERCICIO_5_11 MODIFICADO EJERCICIO_6_09
+public class Lista implements Cola, Pila, ColaDoble { // EJERCICIO_5_11 MODIFICADO EJERCICIO_6_09
 	// ATRIBUTOS
 
 	private Integer tabla[];
@@ -127,15 +127,44 @@ public class Lista { // EJERCICIO_5_11 MODIFICADO EJERCICIO_6_09
 					break;
 				}
 			}
-			// OPCION 2:
-			/*
-			 * int i=0; while(this.tabla[i].equals(otraLista.tabla[i])){ i++; }
-			 * if(this.tabla.lenght !=i){ esIgual=false; }
-			 */
 
 		}
 
 		return esIgual;
 	}
+
+	@Override
+	public void encolar(Integer nuevo) {
+		 insertarAlFinal(nuevo); 
+	}
+
+	@Override
+	public Integer desencolar() {
+		Integer eliminado=getElemento(0);
+		eliminarDePosicion(0);
+		return eliminado;
+	}
+
+	@Override
+	public void apilar(Integer nuevo) {
+		insertarAlFinal(nuevo);	
+	}
+
+	@Override
+	public Integer desapilar() {
+		Integer eliminado=getElemento(tabla.length-1);
+		eliminarDePosicion(tabla.length-1);
+		return eliminado;
+	}
+
+	@Override
+	public void encolarCabeza(Integer nuevo) {
+		insertarAlPrincipio(nuevo);
+	}
+
+	@Override
+	public Integer desencolarFinal() {
+		return null;
+	}	 
 
 }
