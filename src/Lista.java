@@ -165,6 +165,12 @@ public class Lista implements Cola, Pila, ColaDoble { // EJERCICIO_5_11 MODIFICA
 	@Override
 	public Integer desencolarFinal() {
 		return null;
+	}
+
+	@Override
+	public void encolarMultiple(Integer[] tabla) {
+		// TODO Auto-generated method stub
+		
 	}	 
 
 }
